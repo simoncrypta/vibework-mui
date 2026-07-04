@@ -18,6 +18,7 @@
     ".storybook/docs.css",
     "src/app/document.tsx",
     "src/app/providers.tsx",
+    "src/app/theme.ts",
     "src/app/styles.css"
   ],
   "globs": ["src/app/pages/**", "src/app/components/**", "src/storybook/**"]

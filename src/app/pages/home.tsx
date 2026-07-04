@@ -1,49 +1,82 @@
-import { HelloForm } from "@/app/components/hello-form";
-import { InfoCard } from "@/app/components/info-card";
+import { FeatureCard } from "@/app/components/feature-card";
+import { HomeFormCard } from "@/app/components/home-form-card";
+import { MuiShowcase } from "@/app/components/mui-showcase";
+import { PageHeader } from "@/app/components/page-header";
+import { StatusPill } from "@/app/components/status-pill";
+import { TokenSwatch } from "@/app/components/token-swatch";
 
 /**
- * Server Component page: Tailwind for layout, small client islands for interactivity.
+ * Server Component page: MUI for components, Tailwind for layout/wrappers.
+ * Interactive bits live in small client islands (see home-form.tsx).
  */
 export const Home = () => {
   return (
-    <main className="min-h-screen bg-slate-50 p-8 text-slate-900">
+    <main className="min-h-screen bg-background p-8">
       <div className="mx-auto flex max-w-3xl flex-col gap-8">
-        <header className="flex flex-col gap-2">
-          <h1 className="text-3xl font-semibold tracking-tight">Vibework + MUI</h1>
-          <p className="text-slate-600">
-            RedwoodSDK RSC on Cloudflare Workers. MUI components coming soon — Tailwind demo for
-            now. Based on the{" "}
-            <a
-              href="https://github.com/simoncrypta/vibework"
-              className="font-medium text-blue-600 underline-offset-2 hover:underline"
-            >
-              vibework core
-            </a>
-            .
-          </p>
-        </header>
+        <PageHeader
+          title="Vibework + MUI"
+          description="RedwoodSDK RSC on Cloudflare Workers. MUI for components; Tailwind handles layout and token-backed utilities via the design-system bridge."
+        />
 
-        <hr className="border-slate-200" />
+        <hr className="border-0 border-t border-divider" />
 
         <section className="flex flex-col gap-3">
-          <h2 className="text-xl font-medium">Compose components</h2>
-          <InfoCard
-            tags={["RSC", "Tailwind", "Edge"]}
-            description="Pages stay Server Components. Controlled inputs and local state live in small client islands."
+          <h2 className="text-xl font-medium">Tailwind on MUI components</h2>
+          <MuiShowcase />
+        </section>
+
+        <hr className="border-0 border-t border-divider" />
+
+        <section className="flex flex-col gap-3">
+          <h2 className="text-xl font-medium">Token-backed utilities</h2>
+          <p className="text-text-secondary">
+            Classes like <code className="text-sm">bg-background-paper</code> and{" "}
+            <code className="text-sm">text-primary</code> resolve to MUI CSS variables.
+          </p>
+          <div className="grid grid-cols-3 gap-3">
+            <TokenSwatch
+              token="bg-background-paper"
+              description="Cards, panels"
+              className="bg-background-paper"
+            />
+            <TokenSwatch
+              token="bg-background"
+              description="Page background"
+              className="bg-background"
+            />
+            <TokenSwatch token="bg-muted" description="Subtle emphasis" className="bg-muted" />
+          </div>
+          <div className="flex gap-3">
+            <StatusPill status="success" label="Success" />
+            <StatusPill status="error" label="Error" />
+            <StatusPill status="warning" label="Warning" />
+          </div>
+        </section>
+
+        <hr className="border-0 border-t border-divider" />
+
+        <section className="flex flex-col gap-3">
+          <h2 className="text-xl font-medium">Compose with layout components</h2>
+          <FeatureCard
+            badges={[
+              { label: "RSC", variant: "info" },
+              { label: "Tailwind", variant: "success" },
+              { label: "MUI", variant: "neutral" },
+            ]}
+            description="Prefer MUI layout primitives (Stack, Card, Paper) for structure; use Tailwind on wrappers and className overrides."
             ctaLabel="Get started"
           />
         </section>
 
-        <hr className="border-slate-200" />
+        <hr className="border-0 border-t border-divider" />
 
         <section className="flex flex-col gap-3">
           <h2 className="text-xl font-medium">Client island (forms)</h2>
-          <p className="text-sm text-slate-600">
-            The form below is a client component so the page shell remains a Server Component.
+          <p className="text-text-secondary">
+            Controlled inputs stay in a small client component so the page shell remains a Server
+            Component.
           </p>
-          <div className="max-w-md rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-            <HelloForm />
-          </div>
+          <HomeFormCard />
         </section>
       </div>
     </main>

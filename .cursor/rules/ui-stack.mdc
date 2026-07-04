@@ -4,26 +4,26 @@ globs: src/**/*
 alwaysApply: false
 ---
 
-# UI stack (RSC + Tailwind)
+# UI stack (RSC + MUI + Tailwind)
 
 ## Structure
 
 - Pages: Server Components in `src/app/pages/`
-- Interactive forms / state: small `"use client"` files under `src/app/components/` (see `hello-form.tsx`)
+- Interactive forms / state: small `"use client"` files under `src/app/components/` (see `home-form.tsx`)
 - Document shell: `src/app/document.tsx` — stylesheet via `?url` for RSC HTML
-- Optional providers: `src/app/providers.tsx` — add your design-system theme here
-- Styles: `src/app/styles.css` (Tailwind), linked from `Document` via `?url`
+- Theme: `src/app/theme.ts` + `src/app/providers.tsx` (MUI `ThemeProvider`, Emotion cache)
+- Styles: `src/app/styles.css` (Tailwind + MUI CSS layers), linked from `Document` via `?url`
 
 ## Styling
 
 - **Tailwind** for layout, spacing, and page chrome
-- Add a design system via `providers.tsx` and component imports when ready
-- Prefer utility classes over raw hex/px for prototypes
+- **MUI** for components — import from `@mui/material/Button` etc. (not barrel imports)
+- Use `className` on MUI roots and `slotProps` for inner slots when Tailwind overrides are needed
 
 ## Patterns
 
-- Server page + client form: `src/app/pages/home.tsx` + `src/app/components/hello-form.tsx`
-- Presentational + interactive card: `src/app/components/info-card.tsx`
+- Server page + client form: `src/app/pages/home.tsx` + `src/app/components/home-form.tsx`
+- Presentational + interactive card: `src/app/components/feature-card.tsx`
 
 ## Routes
 

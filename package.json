@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
-    "dev:init": "rw-scripts dev-init",
+    "dev:init": "node scripts/dev-init.mjs",
     "build": "vp build",
     "preview": "vp preview",
     "worker:run": "rw-scripts worker-run",
@@ -21,6 +21,11 @@
     "prepare": "vp config"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@fontsource/roboto": "^5.2.10",
+    "@mui/material": "^9.2.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "react-server-dom-webpack": "19.2.7",
@@ -54,7 +59,7 @@
     "packageManager": {
       "name": "pnpm",
       "version": "11.9.0",
-      "onFail": "download"
+      "onFail": "warn"
     }
   }
 }

@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, fn, userEvent, within } from "storybook/test";
 
-import { InfoCard } from "./info-card";
+import { FeatureCard } from "./feature-card";
 
 const meta = {
-  title: "Vibework/Components/InfoCard",
-  component: InfoCard,
+  title: "Vibework/Components/FeatureCard",
+  component: FeatureCard,
   tags: ["autodocs", "test"],
   parameters: {
     layout: "centered",
@@ -18,13 +18,17 @@ const meta = {
     ),
   ],
   args: {
-    tags: ["RSC", "Tailwind", "Edge"],
+    badges: [
+      { label: "RSC", variant: "info" },
+      { label: "Tailwind", variant: "success" },
+      { label: "MUI", variant: "neutral" },
+    ],
     description:
-      "Pages stay Server Components. Controlled inputs and local state live in small client islands.",
+      "Prefer MUI layout primitives (Stack, Card, Paper) for structure; use Tailwind on wrappers and className overrides.",
     ctaLabel: "Get started",
     onCtaClick: fn(),
   },
-} satisfies Meta<typeof InfoCard>;
+} satisfies Meta<typeof FeatureCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -40,10 +44,10 @@ export const Default: Story = {
   },
 };
 
-export const SingleTag: Story = {
+export const SingleBadge: Story = {
   args: {
-    tags: ["New"],
-    description: "A focused card with one tag and a short call to action.",
+    badges: [{ label: "New", variant: "info" }],
+    description: "A focused card with one badge and a short call to action.",
     ctaLabel: "Learn more",
   },
   play: async ({ canvasElement }) => {
@@ -51,7 +55,7 @@ export const SingleTag: Story = {
 
     await expect(canvas.getByText("New")).toBeVisible();
     await expect(
-      canvas.getByText("A focused card with one tag and a short call to action."),
+      canvas.getByText("A focused card with one badge and a short call to action."),
     ).toBeVisible();
     await expect(canvas.getByRole("button", { name: "Learn more" })).toBeEnabled();
   },

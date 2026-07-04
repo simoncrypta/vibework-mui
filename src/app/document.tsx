@@ -1,8 +1,10 @@
+import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
+
 import { Providers } from "@/app/providers";
 import styles from "@/app/styles.css?url";
 
 export const Document: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <html lang="en">
+  <html lang="en" suppressHydrationWarning>
     <head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,6 +12,7 @@ export const Document: React.FC<{ children: React.ReactNode }> = ({ children }) 
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       {/* Stylesheet link (not a JS CSS import) so CSS ships with the RSC HTML. */}
       <link rel="stylesheet" href={styles} />
+      <InitColorSchemeScript />
       <link rel="modulepreload" href="/src/client.tsx" />
     </head>
     <body>

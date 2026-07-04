@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { expect, userEvent, within } from "storybook/test";
 
-import { HelloForm } from "./hello-form";
+import { HomeForm } from "./home-form";
 
 const meta = {
-  title: "Vibework/Components/HelloForm",
-  component: HelloForm,
+  title: "Vibework/Components/HomeForm",
+  component: HomeForm,
   tags: ["autodocs", "test"],
   parameters: {
     layout: "centered",
@@ -17,7 +17,7 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof HelloForm>;
+} satisfies Meta<typeof HomeForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
