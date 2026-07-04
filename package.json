@@ -18,13 +18,16 @@
     "storybook": "storybook dev -p 6006",
     "storybook-build": "storybook build",
     "build:starter": "node scripts/build-starter.mjs",
+    "generate:mui-stories": "node scripts/generate-mui-stories.mjs",
     "prepare": "vp config"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/material-icons": "^5.2.7",
     "@fontsource/roboto": "^5.2.10",
+    "@mui/lab": "9.0.0-beta.6",
     "@mui/material": "^9.2.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
@@ -34,9 +37,11 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.43.0",
     "@cloudflare/workers-types": "^4.20260426.1",
+    "@mui/icons-material": "^9.2.0",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
     "@storybook/addon-mcp": "0.6.0",
+    "@storybook/addon-themes": "^10.4.6",
     "@storybook/addon-vitest": "^10.4.6",
     "@storybook/react": "^10.4.6",
     "@storybook/react-vite": "^10.4.6",

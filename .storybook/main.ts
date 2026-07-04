@@ -7,13 +7,31 @@ import { mergeConfig } from "vite-plus";
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
-  stories: ["../src/app/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../src/storybook/**/*.mdx",
+    "../src/storybook/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../src/app/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
+    "@storybook/addon-themes",
     "@storybook/addon-vitest",
     "@storybook/addon-mcp",
   ],
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules\/(?!@mui)/.test(prop.parent.fileName) : true,
+    },
+  },
   framework: {
     name: "@storybook/react-vite",
     options: {

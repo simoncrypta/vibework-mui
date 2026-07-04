@@ -226,9 +226,15 @@ importers:
       '@emotion/styled':
         specifier: ^11.14.1
         version: 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)
+      '@fontsource/material-icons':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@fontsource/roboto':
         specifier: ^5.2.10
         version: 5.2.10
+      '@mui/lab':
+        specifier: 9.0.0-beta.6
+        version: 9.0.0-beta.6(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@mui/material@9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@mui/material':
         specifier: ^9.2.0
         version: 9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -251,6 +257,9 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^4.20260426.1
         version: 4.20260702.1
+      '@mui/icons-material':
+        specifier: ^9.2.0
+        version: 9.2.0(@mui/material@9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)
       '@storybook/addon-a11y':
         specifier: ^10.4.6
         version: 10.4.6(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))
@@ -260,6 +269,9 @@ importers:
       '@storybook/addon-mcp':
         specifier: 0.6.0
         version: 0.6.0(@storybook/addon-vitest@10.4.6(@vitest/browser-playwright@4.1.9)(@vitest/browser@4.1.9(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(vitest@4.1.9))(@vitest/runner@4.1.9)(react@19.2.7)(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))(vitest@4.1.9))(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))(typescript@6.0.3)
+      '@storybook/addon-themes':
+        specifier: ^10.4.6
+        version: 10.4.6(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))
       '@storybook/addon-vitest':
         specifier: ^10.4.6
         version: 10.4.6(@vitest/browser-playwright@4.1.9)(@vitest/browser@4.1.9(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(vitest@4.1.9))(@vitest/runner@4.1.9)(react@19.2.7)(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))(vitest@4.1.9)
@@ -741,6 +753,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource/material-icons@5.2.7':
+    resolution: {integrity: sha512-crPmK0L34lPGmS5GSGLasKpRGQzl95SxMsLM+QhBHPgR9uxSsyI5CUTb0cgoMpjtR+Bf1bC9QOe6pavoybbBwg==}
+
   '@fontsource/roboto@5.2.10':
     resolution: {integrity: sha512-8HlA5FtSfz//oFSr2eL7GFXAiE7eIkcGOtx7tjsLKq+as702x9+GU7K95iDeWFapHC4M2hv9RrpXKRTGGBI8Zg==}
 
@@ -939,6 +954,38 @@ packages:
 
   '@mui/core-downloads-tracker@9.2.0':
     resolution: {integrity: sha512-+XMav+ZaXkZKUFUgzjrfMEedfyJKxxviAske2q8N8CWDMeqZdDU2lWMkiUPiB388hGaDqhwvOAwkrsc/pUyp8g==}
+
+  '@mui/icons-material@9.2.0':
+    resolution: {integrity: sha512-VgBd3z7Qc3vd/thcNSMC03nHRh/U4DzMUd+1dRyJTbm/hGo7+N6N4GDuJZDNHa6LZhhwG6Cu1X3DNvrVv8sNag==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@mui/material': ^9.2.0
+      '@types/react': ^17.0.0 || ^18.0.0 || ^19.0.0
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  '@mui/lab@9.0.0-beta.6':
+    resolution: {integrity: sha512-y92D7zcvX2OCzFFu4IbYKAVj3cayuFHX6OZm0LdsLDPlUi55zjUhjR9pjI23nCGAQXRPmWE/3BZjCyFiYYpNqQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@emotion/react': ^11.5.0
+      '@emotion/styled': ^11.3.0
+      '@mui/material': ^9.2.0
+      '@mui/material-pigment-css': ^9.2.0
+      '@types/react': ^17.0.0 || ^18.0.0 || ^19.0.0
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/react':
+        optional: true
+      '@emotion/styled':
+        optional: true
+      '@mui/material-pigment-css':
+        optional: true
+      '@types/react':
+        optional: true
 
   '@mui/material@9.2.0':
     resolution: {integrity: sha512-+YTRSgGKGrrRo2XJZXs7JRA6qHoHWvNtxyqxnrRJTBmIuLOUpxxh7m4G9lF4tWberxGFY+EqkkRPgJCl+fSMJg==}
@@ -1617,6 +1664,11 @@ packages:
     peerDependenciesMeta:
       '@storybook/addon-vitest':
         optional: true
+
+  '@storybook/addon-themes@10.4.6':
+    resolution: {integrity: sha512-80d622oB9xWZs3VH4uywkLOA5L2DAx04lVouvCM4XH+pLnJElidoylOLm3i3ByvlGkRjCbB27OUVsW94IgyDrw==}
+    peerDependencies:
+      storybook: ^10.4.6
 
   '@storybook/addon-vitest@10.4.6':
     resolution: {integrity: sha512-VvskHge0GZy86LG6kcY5Ww34z8rDV8JBxqSdUpcJVsWfIvyX6MfAbqI76LlereSyBIJGZJZsqaLwRXsQoVY+0Q==}
@@ -4665,6 +4717,8 @@ snapshots:
   '@esbuild/win32-x64@0.28.1':
     optional: true
 
+  '@fontsource/material-icons@5.2.7': {}
+
   '@fontsource/roboto@5.2.10': {}
 
   '@img/colour@1.1.0': {}
@@ -4837,6 +4891,30 @@ snapshots:
       react: 19.2.7
 
   '@mui/core-downloads-tracker@9.2.0': {}
+
+  '@mui/icons-material@9.2.0(@mui/material@9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      '@mui/material': 9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      react: 19.2.7
+    optionalDependencies:
+      '@types/react': 19.2.17
+
+  '@mui/lab@9.0.0-beta.6(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@mui/material@9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      '@mui/material': 9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@mui/system': 9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)
+      '@mui/types': 9.1.1(@types/react@19.2.17)
+      '@mui/utils': 9.2.0(@types/react@19.2.17)(react@19.2.7)
+      clsx: 2.1.1
+      prop-types: 15.8.1
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+    optionalDependencies:
+      '@emotion/react': 11.14.0(@types/react@19.2.17)(react@19.2.7)
+      '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7)
+      '@types/react': 19.2.17
 
   '@mui/material@9.2.0(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react@19.2.7))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
@@ -5297,6 +5375,11 @@ snapshots:
     transitivePeerDependencies:
       - '@tmcp/auth'
       - typescript
+
+  '@storybook/addon-themes@10.4.6(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))':
+    dependencies:
+      storybook: 10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))
+      ts-dedent: 2.3.0
 
   '@storybook/addon-vitest@10.4.6(@vitest/browser-playwright@4.1.9)(@vitest/browser@4.1.9(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(vitest@4.1.9))(@vitest/runner@4.1.9)(react@19.2.7)(storybook@10.4.6(@testing-library/dom@10.4.1)(@types/react@19.2.17)(react@19.2.7)(vite-plus@0.2.2(@types/node@25.9.4)(@vitest/browser-playwright@4.1.9)(@voidzero-dev/vite-plus-core@0.2.2(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3))(esbuild@0.28.1)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)))(vitest@4.1.9)':
     dependencies:

@@ -1,0 +1,26 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="MUI/Introduction" />
+
+# MUI Design System
+
+This Storybook catalog documents **Material UI** components, foundations, and patterns for Vibework — themed via `src/app/theme.ts`, `src/app/providers.tsx`, and the Tailwind token bridge in `src/app/styles.css`.
+
+## Sections
+
+- **Foundations** — color, typography, spacing, shape, elevation, and theme tokens
+- **Components** — 55+ MUI building blocks with showcase and variant stories
+- **Patterns** — page layouts aligned with [MUI free templates](https://mui.com/material-ui/getting-started/templates/) (sign-in, dashboard, checkout, blog, and more)
+- **Storybook** — follows the [MUI + Storybook recipe](https://storybook.js.org/recipes/@mui/material) (`@storybook/addon-themes`, bundled fonts, docgen controls)
+
+## Regenerating component & pattern stories
+
+After upgrading `@mui/material`:
+
+```bash
+vp run generate:mui-stories
+```
+
+## App-specific stories
+
+Prototype components for this project live under **Vibework** in the sidebar.

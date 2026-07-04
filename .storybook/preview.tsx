@@ -1,24 +1,22 @@
 import type { Preview } from "@storybook/react-vite";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import { themes } from "storybook/theming";
 
-import { Providers } from "../src/app/providers";
-import stylesUrl from "../src/app/styles.css?url";
-import docsStylesUrl from "./docs.css?url";
+import "../src/app/load-fonts";
+import "../src/app/storybook-styles";
 
-for (const href of [stylesUrl, docsStylesUrl]) {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = href;
-  document.head.appendChild(link);
-}
+import { MuiEmotionShell } from "../src/app/mui-emotion-shell";
+import { darkTheme, lightTheme } from "../src/app/theme";
 
-document.documentElement.classList.add("bg-slate-50");
-document.body.classList.add("min-h-screen", "bg-slate-50", "text-slate-900");
+document.documentElement.classList.add("bg-background");
+document.body.classList.add("min-h-screen", "bg-background", "text-primary");
 
 const preview: Preview = {
   tags: ["autodocs"],
   parameters: {
     controls: {
+      expanded: true,
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
@@ -32,10 +30,19 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <Providers>
+      <MuiEmotionShell>
         <Story />
-      </Providers>
+      </MuiEmotionShell>
     ),
+    withThemeFromJSXProvider({
+      themes: {
+        light: lightTheme,
+        dark: darkTheme,
+      },
+      defaultTheme: "light",
+      Provider: ThemeProvider,
+      GlobalStyles: CssBaseline,
+    }),
   ],
 };
 

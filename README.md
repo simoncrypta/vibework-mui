@@ -1,8 +1,8 @@
 # Vibework + MUI
 
-A starter for going from **Figma design → real prototype** fast, with **[MUI](https://mui.com/)** as the component library (wired in soon — greenfield sync from core for now).
+A starter for going from **Figma design → real prototype** fast, with a full **MUI design system catalog in Storybook**.
 
-Drop in a design, describe what you want, and iterate with an AI coding agent. Vibework is intentionally opinionated so you spend time on the product, not on wiring up tooling.
+Drop in a design, describe what you want, and iterate with an AI coding agent. Vibework is intentionally opinionated so you spend time on the product, not on wiring up tooling. The bundled Storybook mirrors [MUI](https://mui.com/material-ui/all-components/) — Foundations, Components, and Patterns — themed with this project's MUI theme.
 
 This repo is a **[GitHub public template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)**. On GitHub, **Use this template** → **Create a new repository** copies everything here into a **new repo** of yours (not a fork). Clone that new repo to work locally.
 
@@ -71,11 +71,11 @@ If setup or packages look wrong, run `vp env doctor` and share the output.
 ## What it's for
 
 - Turning Figma (or any design) into a clickable, deployable prototype quickly
-- Building with MUI components on RedwoodSDK RSC + Cloudflare Workers
+- Browsing and validating MUI components, tokens, and page patterns in Storybook
 - Experimenting with UI and flows without fighting config
 - Pairing with an AI agent that already knows the stack (see [`AGENTS.md`](./AGENTS.md))
 
-It is **not** a production app framework with every feature pre-built. It is a clean runway: React, MUI, edge deploy, one CLI, and Storybook for app components.
+It is **not** a production app framework with every feature pre-built. It is a clean runway: React, MUI design system, edge deploy, one CLI, and a Storybook catalog.
 
 ---
 
@@ -110,22 +110,26 @@ Deploy with `vp run release` (builds with Vite+ and deploys via Wrangler).
 
 ### MUI + Tailwind
 
-**MUI** will be the primary component library; **Tailwind** handles layout and wrappers. Until MUI is wired in, this variant ships the same minimal Tailwind demo as the core template.
+UI comes from [MUI](https://mui.com/material-ui/) with Tailwind for layout and overrides — adapted for RedwoodSDK RSC.
 
-- Theme provider: `src/app/providers.tsx` (MUI `ThemeProvider` — coming soon)
+- Docs: [mui.com/material-ui](https://mui.com/material-ui/all-components/)
 - Global styles: `src/app/styles.css`
+- Theme provider: `src/app/providers.tsx` (MUI `ThemeProvider`)
 - Pages stay Server Components; interactive bits live in small `"use client"` islands
+
+**Styling habit:** MUI components for UI; Tailwind utilities for layout and `className` overrides on wrappers.
 
 ### Storybook
 
-[Storybook](https://storybook.js.org/docs) documents app-specific components. It does **not** ship to the app — only for local browsing and agent reference.
+[Storybook](https://storybook.js.org/docs) documents the full MUI catalog for this project. It does **not** ship to the app — only for local design-system browsing and agent reference.
 
-| Command                  | What it does                        |
-| ------------------------ | ----------------------------------- |
-| `vp run storybook`       | Dev server at http://localhost:6006 |
-| `vp run storybook-build` | Static build → `storybook-static/`  |
+| Command                       | What it does                                            |
+| ----------------------------- | ------------------------------------------------------- |
+| `vp run storybook`            | Dev server at http://localhost:6006                     |
+| `vp run storybook-build`      | Static build → `storybook-static/`                      |
+| `vp run generate:mui-stories` | Regenerate component/pattern stories from the generator |
 
-Stories live under `src/app/components/*.stories.tsx`.
+Stories live under `src/storybook/mui/`. Generated files import MUI components directly. After upgrading `@mui/material`, run `vp run generate:mui-stories` and commit the diff.
 
 ---
 
@@ -139,8 +143,12 @@ src/
     pages/                # Routes / screens — start here
     components/           # App UI + Storybook stories
     document.tsx          # HTML document shell
-    providers.tsx         # Theme (MUI — coming soon)
+    providers.tsx         # Theme (MUI)
     styles.css            # MUI + Tailwind
+  storybook/mui/          # Design system catalog (Storybook only)
+    foundations/          # Hand-authored token & layout docs
+    generated/            # Generated component + pattern stories
+    shared/               # Story helpers
 .storybook/               # Storybook config
 ```
 
@@ -190,4 +198,4 @@ vp run sync:variant -- ../vibework-mui --ref v0.2.0
 | --------------------------------------------------------------------- | ------------------------------------------------- |
 | **[vibework](https://github.com/simoncrypta/vibework)**               | Core stack + Tailwind — bring your own components |
 | **[vibework-astryx](https://github.com/simoncrypta/vibework-astryx)** | Astryx design system + full Storybook catalog     |
-| **vibework-mui** (this repo)                                          | MUI component library (greenfield)                |
+| **vibework-mui** (this repo)                                          | MUI design system + full Storybook catalog        |
