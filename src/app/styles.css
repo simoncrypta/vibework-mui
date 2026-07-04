@@ -1,0 +1,14 @@
+@layer theme, base, mui, components, utilities;
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--mui-palette-primary-main);
+  --color-background: var(--mui-palette-background-default);
+  --color-background-paper: var(--mui-palette-background-paper);
+  --color-text-secondary: var(--mui-palette-text-secondary);
+  --color-success: var(--mui-palette-success-main);
+  --color-error: var(--mui-palette-error-main);
+  --color-warning: var(--mui-palette-warning-main);
+  --color-muted: var(--mui-palette-grey-100);
+  --color-divider: var(--mui-palette-divider);
+}
