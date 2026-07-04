@@ -1,0 +1,24 @@
+{
+  "variant": "mui",
+  "description": "Paths owned by vibework-mui. sync-to-variant never overwrites these.",
+  "paths": [
+    "AGENTS.md",
+    "README.md",
+    "VARIANT_OWNED.json",
+    "MAINTAINER_STRIP.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "tsconfig.json",
+    ".cursor/rules/ui-stack.mdc",
+    ".cursor/rules/component-stories.mdc",
+    ".cursor/skills/figma-to-prototype/SKILL.md",
+    "scripts/build-starter.mjs",
+    ".storybook/main.ts",
+    ".storybook/preview.tsx",
+    ".storybook/docs.css",
+    "src/app/document.tsx",
+    "src/app/providers.tsx",
+    "src/app/styles.css"
+  ],
+  "globs": ["src/app/pages/**", "src/app/components/**", "src/storybook/**"]
+}

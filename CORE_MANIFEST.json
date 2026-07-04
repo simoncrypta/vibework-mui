@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "description": "Files owned by the vibework core template. Design-system variants sync these paths from tagged vibework releases via scripts/sync-to-variant.mjs.",
+  "paths": [
+    ".cursor/hooks.json",
+    ".cursor/hooks/check-component-story.mjs",
+    ".cursor/mcp.json",
+    ".cursor/rules/viteplus.mdc",
+    ".cursor/rules/vibework.mdc",
+    ".gitignore",
+    ".storybook-vitest/main.ts",
+    ".storybook-vitest/preview.tsx",
+    ".storybook/css.d.ts",
+    ".storybook/vite.config.ts",
+    "CORE_MANIFEST.json",
+    "scripts/sync-to-variant.mjs",
+    "pnpm-workspace.yaml",
+    "src/app/headers.ts",
+    "src/app/shared/links.ts",
+    "src/client.tsx",
+    "src/worker.tsx",
+    "types/css.d.ts",
+    "types/rw.d.ts",
+    "types/vite.d.ts",
+    "vite.config.ts",
+    "vitest.config.ts",
+    "wrangler.jsonc"
+  ]
+}
